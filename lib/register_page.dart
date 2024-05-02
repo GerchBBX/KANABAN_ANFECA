@@ -40,8 +40,9 @@ class _RegisterPage extends State<RegisterPage> {
         children: [
           Flexible(
             flex: 1,
-            child: Image.network(
-                'https://as1.ftcdn.net/v2/jpg/00/85/51/18/1000_F_85511870_St7mTxJMmdZ0xSt6dT1G96cARUlCBXRT.jpg',
+            child: Image.asset("register.jpg",
+
+                //'https://as1.ftcdn.net/v2/jpg/00/85/51/18/1000_F_85511870_St7mTxJMmdZ0xSt6dT1G96cARUlCBXRT.jpg',
                 fit: BoxFit.cover,
                 height: double.infinity,
                 width: double.infinity),
@@ -81,7 +82,7 @@ class _RegisterPage extends State<RegisterPage> {
                               color: Colors.black))
                     ]),
                   )),
-                  SizedBox(height: 30),
+                  SizedBox(height: 15),
                   Text(
                     'Nombre',
                     style: TextStyle(
@@ -106,7 +107,7 @@ class _RegisterPage extends State<RegisterPage> {
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      hintText: 'Ingrese su correo',
+                      hintText: 'Ingrese su o',
                     ),
                   ),
                   SizedBox(height: 15),

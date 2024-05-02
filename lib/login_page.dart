@@ -22,8 +22,9 @@ class _LoginPageState extends State<LoginPage> {
           //Imagen superior
           Flexible(
             flex: 1,
-            child: Image.network(
-              'https://t3.ftcdn.net/jpg/06/56/97/20/240_F_656972077_jAon9gaXE4GwdjMYcRvw6eGiXHlsd2xC.jpg',
+            child: Image.asset(
+              "login.jpg",
+              //'https://t3.ftcdn.net/jpg/06/56/97/20/240_F_656972077_jAon9gaXE4GwdjMYcRvw6eGiXHlsd2xC.jpg',
               fit: BoxFit.cover,
               height: double.infinity,
               width: double.infinity,

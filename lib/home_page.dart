@@ -13,6 +13,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _page = 0;
+
+  //List<Widget> _screens = [Screen1(), Screen2(), Screen3()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +31,11 @@ class _HomePageState extends State<HomePage> {
           Icon(Icons.settings, size: 30),
         ],
         onTap: (index) {
-        //Handle button tap
+          setState(() {
+            _page = index;
+          });
+
+          //Handle button tap
         },
       ),
       body: Container(
@@ -41,7 +49,31 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Expanded(
+              child: Container(
+            child: Center(
+              child: Text(
+                _page.toString(),
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 90,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+          )
+              /*Text(
+            _page.toString(),
+            style: TextStyle(
+                color: Colors.black12,
+                fontSize: 80,
+                fontWeight: FontWeight.bold
+              ),
+              textAlign: TextAlign.center,
+            )
+          */
+              )
+        ]),
       ),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(45),
@@ -56,12 +88,12 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           backgroundColor: Color(0xFF40DA62),
-            title: Text(
-              "Menú Principal",
-              style: TextStyle(fontSize: 20, color: Colors.black),
+          title: Text(
+            "Menú Principal",
+            style: TextStyle(fontSize: 20, color: Colors.black),
           ),
         ),
-      ),            
+      ),
     );
   }
 }
